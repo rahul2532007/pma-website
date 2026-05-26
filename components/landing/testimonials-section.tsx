@@ -7,15 +7,15 @@ const contactMethods = [
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "+91 9304804491",
-    href: "https://wa.me/919304804491",
+    value: "+91 8349021100",
+    href: "https://wa.me/8349021100",
     color: "bg-green-500/10 text-green-500",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "pridemarketingagency.in@gmail.com",
-    href: "mailto:pridemarketingagency.in@gmail.com",
+    value: "contact@pridemarketing.co.in",
+    href: "mailto:contact@pridemarketing.co.in",
     color: "bg-blue-500/10 text-blue-500",
   },
   {
@@ -25,15 +25,15 @@ const contactMethods = [
       </svg>
     ),
     label: "Instagram",
-    value: "@pridemarketingagency",
-    href: "https://instagram.com/pridemarketingagency",
+    value: "@pride.pma",
+    href: "https://instagram.com/pride.pma",
     color: "bg-pink-500/10 text-pink-500",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 9304804491",
-    href: "tel:+919304804491",
+    value: "+91 8349021100",
+    href: "tel:+918349021100",
     color: "bg-purple-500/10 text-purple-500",
   },
 ];
