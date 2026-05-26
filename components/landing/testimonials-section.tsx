@@ -8,7 +8,7 @@ const contactMethods = [
     icon: MessageCircle,
     label: "WhatsApp",
     value: "+91 8349021100",
-    href: "https://wa.me/8349021100",
+    href: "https://wa.me/918349021100",
     color: "bg-green-500/10 text-green-500",
   },
   {
