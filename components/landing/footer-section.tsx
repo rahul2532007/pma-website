@@ -16,7 +16,6 @@ const footerLinks = {
     { name: "About PMA", href: "#about" },
     { name: "Our Process", href: "#process" },
     { name: "Pricing", href: "#pricing" },
-    { name: "Our Team", href: "#team" },
     { name: "Contact", href: "#contact" },
   ],
 };
