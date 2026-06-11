@@ -6,9 +6,9 @@ import { Phone, Mail, MessageCircle } from "lucide-react";
 const contactMethods = [
   {
     icon: MessageCircle,
-    label: "Rahul Nishad",
-    value: "+91 8815988376",
-    href: "https://wa.me/918815988376",
+    label: "WhatsApp",
+    value: "+91 8349021100",
+    href: "https://wa.me/918349021100",
     color: "bg-green-500/10 text-green-500",
   },
   {
