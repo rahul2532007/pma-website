@@ -6,7 +6,10 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Pride Digital" },
-      { name: "description", content: "Tell us about your project. We respond within one business day." },
+      {
+        name: "description",
+        content: "Tell us about your project. We respond within one business day.",
+      },
       { property: "og:title", content: "Contact — Pride Digital" },
       { property: "og:description", content: "We respond within one business day." },
       { property: "og:url", content: "https://pride-redesign-1.lovable.app/contact" },
@@ -31,19 +34,31 @@ function ContactPage() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify(payload),
       });
-    } catch {}
+    } catch (error) {
+      console.error("Failed to submit contact form:", error);
+    }
     setSubmitting(false);
     setSent(true);
   }
 
   return (
     <>
-      <PageHeader marker="00" eyebrow="Contact" title={<>Let's talk.</>} lede="The fastest way to start is to book a call. Or tell us a bit about the project and we'll come back within one business day." />
+      <PageHeader
+        marker="00"
+        eyebrow="Contact"
+        title={<>Let's talk.</>}
+        lede="The fastest way to start is to book a call. Or tell us a bit about the project and we'll come back within one business day."
+      />
       <section className="mx-auto max-w-7xl px-6 lg:px-10 py-16 grid lg:grid-cols-12 gap-10">
         <aside className="lg:col-span-4 space-y-8">
           <div>
             <div className="section-marker mb-3">Book directly</div>
-            <Link to="/book" className="inline-flex items-center rounded-full bg-ink text-paper px-5 py-3 text-sm font-medium hover:opacity-90 transition">Book a Consultation →</Link>
+            <Link
+              to="/book"
+              className="inline-flex items-center rounded-full bg-ink text-paper px-5 py-3 text-sm font-medium hover:opacity-90 transition"
+            >
+              Book a Consultation →
+            </Link>
           </div>
           <div className="border-t border-rule pt-6">
             <div className="section-marker mb-3">Or write</div>
@@ -67,11 +82,23 @@ function ContactPage() {
               <Field name="company" label="Company" />
               <Field name="budget" label="Budget range" placeholder="e.g. $25k–$50k" />
               <div className="sm:col-span-2">
-                <label htmlFor="contact-project" className="section-marker">Project</label>
-                <textarea id="contact-project" name="project" required rows={6} className="mt-2 block w-full border border-rule bg-paper px-4 py-3 text-sm focus:outline-none focus:border-ink" />
+                <label htmlFor="contact-project" className="section-marker">
+                  Project
+                </label>
+                <textarea
+                  id="contact-project"
+                  name="project"
+                  required
+                  rows={6}
+                  className="mt-2 block w-full border border-rule bg-paper px-4 py-3 text-sm focus:outline-none focus:border-ink"
+                />
               </div>
               <div className="sm:col-span-2">
-                <button type="submit" disabled={submitting} className="inline-flex items-center rounded-full bg-ink text-paper px-6 py-3 text-sm font-medium hover:opacity-90 transition disabled:opacity-60">
+                <button
+                  type="submit"
+                  disabled={submitting}
+                  className="inline-flex items-center rounded-full bg-ink text-paper px-6 py-3 text-sm font-medium hover:opacity-90 transition disabled:opacity-60"
+                >
                   {submitting ? "Sending…" : "Send"}
                 </button>
               </div>
@@ -83,13 +110,33 @@ function ContactPage() {
   );
 }
 
-function Field({ name, label, type = "text", required = false, placeholder }: { name: string; label: string; type?: string; required?: boolean; placeholder?: string }) {
+function Field({
+  name,
+  label,
+  type = "text",
+  required = false,
+  placeholder,
+}: {
+  name: string;
+  label: string;
+  type?: string;
+  required?: boolean;
+  placeholder?: string;
+}) {
   const id = `contact-${name}`;
   return (
     <div>
-      <label htmlFor={id} className="section-marker">{label}</label>
-      <input id={id} name={name} type={type} required={required} placeholder={placeholder} className="mt-2 block w-full border border-rule bg-paper px-4 py-3 text-sm focus:outline-none focus:border-ink" />
+      <label htmlFor={id} className="section-marker">
+        {label}
+      </label>
+      <input
+        id={id}
+        name={name}
+        type={type}
+        required={required}
+        placeholder={placeholder}
+        className="mt-2 block w-full border border-rule bg-paper px-4 py-3 text-sm focus:outline-none focus:border-ink"
+      />
     </div>
   );
 }
-

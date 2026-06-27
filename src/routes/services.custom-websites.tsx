@@ -7,24 +7,39 @@ export const Route = createFileRoute("/services/custom-websites")({
       { title: "Custom Websites — Pride Digital" },
       { name: "description", content: "Brand-defining websites engineered for conversion." },
       { property: "og:title", content: "Custom Websites — Pride Digital" },
-      { property: "og:description", content: "Hand-built sites that move metrics, not just look good." },
-      { property: "og:url", content: "https://pride-redesign-1.lovable.app/services/custom-websites" },
+      {
+        property: "og:description",
+        content: "Hand-built sites that move metrics, not just look good.",
+      },
+      {
+        property: "og:url",
+        content: "https://pride-redesign-1.lovable.app/services/custom-websites",
+      },
     ],
-    links: [{ rel: "canonical", href: "https://pride-redesign-1.lovable.app/services/custom-websites" }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        name: "Custom Websites",
-        provider: { "@type": "Organization", name: "Pride Digital", url: "https://pridemarketing.co.in/" },
-        url: "https://pride-redesign-1.lovable.app/services/custom-websites",
-      }),
-    }],
+    links: [
+      { rel: "canonical", href: "https://pride-redesign-1.lovable.app/services/custom-websites" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Custom Websites",
+          provider: {
+            "@type": "Organization",
+            name: "Pride Digital",
+            url: "https://pridemarketing.co.in/",
+          },
+          url: "https://pride-redesign-1.lovable.app/services/custom-websites",
+        }),
+      },
+    ],
   }),
   component: () => (
     <ServiceDetail
-      marker="01" eyebrow="Custom Websites"
+      marker="01"
+      eyebrow="Custom Websites"
       title={<>Brand sites that earn the click.</>}
       lede="Editorial design, hand-coded performance, and an information architecture that mirrors how your buyers actually decide."
       forWhom={[

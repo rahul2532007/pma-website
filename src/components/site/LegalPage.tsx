@@ -54,15 +54,11 @@ export function LegalPage({
                 <div className="section-marker mb-3">
                   {String(i + 1).padStart(2, "0")} — Section
                 </div>
-                <h2 className="font-display text-3xl md:text-4xl leading-tight mb-5">
-                  {s.title}
-                </h2>
+                <h2 className="font-display text-3xl md:text-4xl leading-tight mb-5">{s.title}</h2>
                 <div className="prose-legal text-warm-5 leading-relaxed space-y-4 [&_a]:underline [&_a]:underline-offset-4 [&_a:hover]:text-ink [&_h3]:font-display [&_h3]:text-ink [&_h3]:text-xl [&_h3]:mt-6 [&_h3]:mb-2 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:space-y-1 [&_strong]:text-ink">
                   {s.body}
                 </div>
-                {i < sections.length - 1 && (
-                  <div className="mt-16 border-t border-rule" />
-                )}
+                {i < sections.length - 1 && <div className="mt-16 border-t border-rule" />}
               </section>
             ))}
           </div>
@@ -86,8 +82,7 @@ export function ContactBlock() {
       <br />
       Phone: <a href="tel:+918349021100">+91 8349021100</a>
       <br />
-      Email:{" "}
-      <a href="mailto:contact@pridemarketing.co.in">contact@pridemarketing.co.in</a>
+      Email: <a href="mailto:contact@pridemarketing.co.in">contact@pridemarketing.co.in</a>
       <br />
       Web: <a href="https://pridemarketing.co.in">pridemarketing.co.in</a>
     </address>

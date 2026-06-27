@@ -8,7 +8,11 @@ export const Route = createFileRoute("/privacy-policy")({
   head: () => ({
     meta: [
       { title: "Privacy Policy — Pride Digital" },
-      { name: "description", content: "How Pride Digital collects, uses, and protects personal data under India's DPDP Act 2023 and international privacy standards." },
+      {
+        name: "description",
+        content:
+          "How Pride Digital collects, uses, and protects personal data under India's DPDP Act 2023 and international privacy standards.",
+      },
       { property: "og:title", content: "Privacy Policy — Pride Digital" },
       { property: "og:description", content: "How Pride Digital handles your personal data." },
       { property: "og:type", content: "article" },
@@ -17,17 +21,23 @@ export const Route = createFileRoute("/privacy-policy")({
       { name: "twitter:title", content: "Privacy Policy — Pride Digital" },
     ],
     links: [{ rel: "canonical", href: URL }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "PrivacyPolicy",
-        name: "Privacy Policy",
-        url: URL,
-        dateModified: "2026-06-27",
-        publisher: { "@type": "Organization", name: "Pride Digital", url: "https://pridemarketing.co.in" },
-      }),
-    }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "PrivacyPolicy",
+          name: "Privacy Policy",
+          url: URL,
+          dateModified: "2026-06-27",
+          publisher: {
+            "@type": "Organization",
+            name: "Pride Digital",
+            url: "https://pridemarketing.co.in",
+          },
+        }),
+      },
+    ],
   }),
   component: PrivacyPage,
 });
@@ -47,17 +57,15 @@ function PrivacyPage() {
           body: (
             <>
               <p>
-                Pride Digital ("Pride", "we", "us", or "our") respects your privacy
-                and is committed to protecting your personal data. This Privacy
-                Policy explains what information we collect when you interact with
-                our website, services, and consultations, and how that information
-                is used, stored, and disclosed.
+                Pride Digital ("Pride", "we", "us", or "our") respects your privacy and is committed
+                to protecting your personal data. This Privacy Policy explains what information we
+                collect when you interact with our website, services, and consultations, and how
+                that information is used, stored, and disclosed.
               </p>
               <p>
-                This policy is written in line with the Digital Personal Data
-                Protection Act, 2023 (DPDP Act) of India and is broadly aligned
-                with international privacy frameworks including the EU GDPR and
-                the UK GDPR for our international clients.
+                This policy is written in line with the Digital Personal Data Protection Act, 2023
+                (DPDP Act) of India and is broadly aligned with international privacy frameworks
+                including the EU GDPR and the UK GDPR for our international clients.
               </p>
             </>
           ),
@@ -110,11 +118,10 @@ function PrivacyPage() {
           body: (
             <>
               <p>
-                We process personal data on one or more of the following legal
-                bases: your consent, the performance of a contract with you,
-                compliance with a legal obligation, and our legitimate interests
-                in operating and improving the studio (where those interests are
-                not overridden by your rights).
+                We process personal data on one or more of the following legal bases: your consent,
+                the performance of a contract with you, compliance with a legal obligation, and our
+                legitimate interests in operating and improving the studio (where those interests
+                are not overridden by your rights).
               </p>
             </>
           ),
@@ -125,12 +132,11 @@ function PrivacyPage() {
           body: (
             <>
               <p>
-                We retain personal data only for as long as is necessary for the
-                purposes for which it was collected, including to satisfy legal,
-                accounting, or reporting requirements. Enquiry data is typically
-                retained for up to 24 months after last contact. Engagement
-                records and invoices are retained for the period required by
-                Indian tax and corporate law.
+                We retain personal data only for as long as is necessary for the purposes for which
+                it was collected, including to satisfy legal, accounting, or reporting requirements.
+                Enquiry data is typically retained for up to 24 months after last contact.
+                Engagement records and invoices are retained for the period required by Indian tax
+                and corporate law.
               </p>
             </>
           ),
@@ -141,12 +147,11 @@ function PrivacyPage() {
           body: (
             <>
               <p>
-                We use industry-standard technical and organisational measures to
-                protect your data, including encryption in transit, access
-                controls, principle-of-least-privilege for team members, and
-                reputable hosting and infrastructure providers. No method of
-                transmission over the internet is fully secure, and we cannot
-                guarantee absolute security.
+                We use industry-standard technical and organisational measures to protect your data,
+                including encryption in transit, access controls, principle-of-least-privilege for
+                team members, and reputable hosting and infrastructure providers. No method of
+                transmission over the internet is fully secure, and we cannot guarantee absolute
+                security.
               </p>
             </>
           ),
@@ -157,30 +162,28 @@ function PrivacyPage() {
           body: (
             <>
               <p>
-                We share limited personal data with carefully selected service
-                providers who process it on our behalf and under contract:
+                We share limited personal data with carefully selected service providers who process
+                it on our behalf and under contract:
               </p>
               <h3>Google Analytics</h3>
               <p>
-                We use Google Analytics to understand aggregated, anonymised
-                website usage. IP anonymisation is enabled where supported.
+                We use Google Analytics to understand aggregated, anonymised website usage. IP
+                anonymisation is enabled where supported.
               </p>
               <h3>Hosting providers</h3>
               <p>
-                Our website and project infrastructure are hosted with
-                reputable cloud providers operating data centres in India and
-                abroad.
+                Our website and project infrastructure are hosted with reputable cloud providers
+                operating data centres in India and abroad.
               </p>
               <h3>Contact forms</h3>
               <p>
-                Form submissions are routed through our website backend and
-                stored in our project management system to allow our team to
-                respond.
+                Form submissions are routed through our website backend and stored in our project
+                management system to allow our team to respond.
               </p>
               <h3>Email communication</h3>
               <p>
-                We use established email providers to send and receive
-                transactional and project-related email.
+                We use established email providers to send and receive transactional and
+                project-related email.
               </p>
             </>
           ),
@@ -191,10 +194,9 @@ function PrivacyPage() {
           body: (
             <>
               <p>
-                We use a small number of cookies and similar technologies to
-                operate the website (essential cookies), remember preferences,
-                and measure aggregate traffic (analytics cookies). You can
-                control cookies through your browser settings; disabling certain
+                We use a small number of cookies and similar technologies to operate the website
+                (essential cookies), remember preferences, and measure aggregate traffic (analytics
+                cookies). You can control cookies through your browser settings; disabling certain
                 cookies may affect site functionality.
               </p>
             </>
@@ -211,13 +213,15 @@ function PrivacyPage() {
                 <li>Correct inaccurate or incomplete personal data</li>
                 <li>Erase personal data where it is no longer needed</li>
                 <li>Withdraw consent previously given</li>
-                <li>Nominate another person to exercise your rights in the event of incapacity or death</li>
+                <li>
+                  Nominate another person to exercise your rights in the event of incapacity or
+                  death
+                </li>
                 <li>Grieve and seek redressal through our Grievance Officer</li>
               </ul>
               <p>
-                To exercise any of these rights, contact us using the details at
-                the end of this policy. We will respond within the timelines
-                prescribed by law.
+                To exercise any of these rights, contact us using the details at the end of this
+                policy. We will respond within the timelines prescribed by law.
               </p>
             </>
           ),
@@ -228,12 +232,11 @@ function PrivacyPage() {
           body: (
             <>
               <p>
-                We work with clients in the United States, United Kingdom, UAE,
-                Canada, France, Singapore, and elsewhere. Where we process the
-                personal data of individuals outside India, we apply protections
-                consistent with applicable local law, including the EU GDPR and
-                the UK GDPR where relevant, and use appropriate cross-border
-                transfer safeguards.
+                We work with clients in the United States, United Kingdom, UAE, Canada, France,
+                Singapore, and elsewhere. Where we process the personal data of individuals outside
+                India, we apply protections consistent with applicable local law, including the EU
+                GDPR and the UK GDPR where relevant, and use appropriate cross-border transfer
+                safeguards.
               </p>
             </>
           ),
@@ -244,10 +247,9 @@ function PrivacyPage() {
           body: (
             <>
               <p>
-                Our services are intended for businesses and adult professionals.
-                We do not knowingly collect personal data from children. If you
-                believe a child has provided us with personal data, please
-                contact us and we will delete it.
+                Our services are intended for businesses and adult professionals. We do not
+                knowingly collect personal data from children. If you believe a child has provided
+                us with personal data, please contact us and we will delete it.
               </p>
             </>
           ),
@@ -258,10 +260,9 @@ function PrivacyPage() {
           body: (
             <>
               <p>
-                We may update this Privacy Policy from time to time to reflect
-                changes in law, technology, or our practices. Material changes
-                will be highlighted on this page with an updated "Last updated"
-                date.
+                We may update this Privacy Policy from time to time to reflect changes in law,
+                technology, or our practices. Material changes will be highlighted on this page with
+                an updated "Last updated" date.
               </p>
             </>
           ),
@@ -272,9 +273,8 @@ function PrivacyPage() {
           body: (
             <>
               <p>
-                For any questions, requests, or grievances regarding this Privacy
-                Policy or your personal data, please contact our Grievance
-                Officer:
+                For any questions, requests, or grievances regarding this Privacy Policy or your
+                personal data, please contact our Grievance Officer:
               </p>
               <ContactBlock />
             </>
