@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pride-redesign-1.lovable.app/sitemap.xml

@@ -1,0 +1,21 @@
+# Pride Digital
+
+> Global studio designing and engineering custom websites, landing pages, e-commerce stores, and software for ambitious teams.
+
+## Pages
+
+- [Home](/): Studio overview and positioning.
+- [Services](/services): Five practices — custom websites, portfolio sites, landing pages, e-commerce, custom software.
+- [Custom Websites](/services/custom-websites): Brand sites built to convert.
+- [Portfolio Websites](/services/portfolio-websites): Editorial showcases for creators and studios.
+- [Landing Pages](/services/landing-pages): Single-purpose pages built around one decision.
+- [E-commerce](/services/ecommerce): Stores tuned for AOV, repeat purchase, and margin.
+- [Custom Software](/services/custom-software): Internal tools and bespoke platforms.
+- [Industries](/industries): Sectors we go deep in — legal, healthcare, creators, e-commerce, SaaS.
+- [Process](/process): Our six-phase method, from discovery to iteration.
+- [Pricing](/pricing): Honest starting prices for each practice.
+- [Work](/work): Selected case studies.
+- [About](/about): The team behind Pride Digital.
+- [FAQ](/faq): Common questions about timelines, pricing, ownership, and process.
+- [Book](/book): Schedule a 30-minute consultation.
+- [Contact](/contact): Get in touch.
