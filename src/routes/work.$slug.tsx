@@ -2,16 +2,25 @@ import { createFileRoute, notFound } from "@tanstack/react-router";
 import { PageHeader, CTASection, Section, RuleDivider } from "../components/site/primitives";
 
 type CaseStudy = {
-  client: string; sector: string; metric: string; title: string; lede: string;
-  problem: string; approach: string[]; outcome: { metric: string; label: string }[];
+  client: string;
+  sector: string;
+  metric: string;
+  title: string;
+  lede: string;
+  problem: string;
+  approach: string[];
+  outcome: { metric: string; label: string }[];
 };
 
 const CASES: Record<string, CaseStudy> = {
   "sterling-vale": {
-    client: "Sterling & Vale", sector: "Legal", metric: "+186% qualified leads",
+    client: "Sterling & Vale",
+    sector: "Legal",
+    metric: "+186% qualified leads",
     title: "A boutique firm becomes the obvious choice.",
     lede: "Repositioned a 14-partner boutique against the magic-circle, and rebuilt the site around the way clients actually shortlist firms.",
-    problem: "A respected practice with a website that read like a brochure — slow, generic, and invisible in search.",
+    problem:
+      "A respected practice with a website that read like a brochure — slow, generic, and invisible in search.",
     approach: [
       "Discovery with named partners and former clients",
       "Practice-led IA mapped to buyer intent",
@@ -25,10 +34,13 @@ const CASES: Record<string, CaseStudy> = {
     ],
   },
   "northwind-health": {
-    client: "Northwind Health", sector: "Healthcare", metric: "−42% booking friction",
+    client: "Northwind Health",
+    sector: "Healthcare",
+    metric: "−42% booking friction",
     title: "Patient intake, redesigned end-to-end.",
     lede: "A multi-clinic group reduced booking friction by reworking the intake flow and the website behind it.",
-    problem: "Patients were dropping out of the booking flow at every step. Staff were re-keying data.",
+    problem:
+      "Patients were dropping out of the booking flow at every step. Staff were re-keying data.",
     approach: [
       "Mapped the full intake journey across web and clinic",
       "Designed a single, accessible booking primitive",
@@ -42,7 +54,9 @@ const CASES: Record<string, CaseStudy> = {
     ],
   },
   "atelier-goods": {
-    client: "Atelier Goods", sector: "E-commerce", metric: "+31% AOV",
+    client: "Atelier Goods",
+    sector: "E-commerce",
+    metric: "+31% AOV",
     title: "From DTC store to brand world.",
     lede: "Re-platformed and re-storied a category-leading DTC brand. Same products, twice the brand equity.",
     problem: "A product-led brand that looked like every other Shopify store, with AOV plateauing.",
@@ -102,25 +116,35 @@ function CasePage() {
       <PageHeader marker={c.sector} eyebrow={c.client} title={c.title} lede={c.lede} />
       <Section>
         <div className="grid lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-4"><div className="section-marker">01 — Problem</div></div>
+          <div className="lg:col-span-4">
+            <div className="section-marker">01 — Problem</div>
+          </div>
           <p className="lg:col-span-8 text-lg text-warm-5">{c.problem}</p>
         </div>
       </Section>
       <RuleDivider />
       <Section>
         <div className="grid lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-4"><div className="section-marker">02 — Approach</div></div>
+          <div className="lg:col-span-4">
+            <div className="section-marker">02 — Approach</div>
+          </div>
           <ul className="lg:col-span-8 space-y-3">
-            {c.approach.map(a => <li key={a} className="border-t border-rule pt-3 text-warm-5">{a}</li>)}
+            {c.approach.map((a) => (
+              <li key={a} className="border-t border-rule pt-3 text-warm-5">
+                {a}
+              </li>
+            ))}
           </ul>
         </div>
       </Section>
       <RuleDivider />
       <Section>
         <div className="grid lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-4"><div className="section-marker">03 — Outcome</div></div>
+          <div className="lg:col-span-4">
+            <div className="section-marker">03 — Outcome</div>
+          </div>
           <div className="lg:col-span-8 grid sm:grid-cols-3 gap-6">
-            {c.outcome.map(o => (
+            {c.outcome.map((o) => (
               <div key={o.label} className="border border-rule p-6">
                 <div className="font-display text-4xl text-amber">{o.metric}</div>
                 <div className="mt-2 text-sm text-warm-5">{o.label}</div>

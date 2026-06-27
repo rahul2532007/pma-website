@@ -8,23 +8,35 @@ export const Route = createFileRoute("/services/landing-pages")({
       { name: "description", content: "Single-purpose pages engineered around one decision." },
       { property: "og:title", content: "Landing Pages — Pride Digital" },
       { property: "og:description", content: "Built around one decision." },
-      { property: "og:url", content: "https://pride-redesign-1.lovable.app/services/landing-pages" },
+      {
+        property: "og:url",
+        content: "https://pride-redesign-1.lovable.app/services/landing-pages",
+      },
     ],
-    links: [{ rel: "canonical", href: "https://pride-redesign-1.lovable.app/services/landing-pages" }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        name: "Landing Pages",
-        provider: { "@type": "Organization", name: "Pride Digital", url: "https://pridemarketing.co.in/" },
-        url: "https://pride-redesign-1.lovable.app/services/landing-pages",
-      }),
-    }],
+    links: [
+      { rel: "canonical", href: "https://pride-redesign-1.lovable.app/services/landing-pages" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Landing Pages",
+          provider: {
+            "@type": "Organization",
+            name: "Pride Digital",
+            url: "https://pridemarketing.co.in/",
+          },
+          url: "https://pride-redesign-1.lovable.app/services/landing-pages",
+        }),
+      },
+    ],
   }),
   component: () => (
     <ServiceDetail
-      marker="03" eyebrow="Landing Pages"
+      marker="03"
+      eyebrow="Landing Pages"
       title={<>One page. One decision.</>}
       lede="Performance-marketing pages built around a single conversion — no global navigation, no distractions, no filler."
       forWhom={[

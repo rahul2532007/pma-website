@@ -9,7 +9,6 @@ const contactSchema = z.object({
   project: z.string().trim().min(1, "Project is required").max(2000),
 });
 
-
 const GOOGLE_FORM_ACTION =
   "https://docs.google.com/forms/d/e/1FAIpQLSdaIfrrfe_37jC9j2_nDz6CRoLvxoeMbEBaalquh-ByY6sGqg/formResponse";
 
