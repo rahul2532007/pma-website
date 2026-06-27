@@ -11,20 +11,27 @@ export const Route = createFileRoute("/services/ecommerce")({
       { property: "og:url", content: "https://pride-redesign-1.lovable.app/services/ecommerce" },
     ],
     links: [{ rel: "canonical", href: "https://pride-redesign-1.lovable.app/services/ecommerce" }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        name: "E-commerce",
-        provider: { "@type": "Organization", name: "Pride Digital", url: "https://pridemarketing.co.in/" },
-        url: "https://pride-redesign-1.lovable.app/services/ecommerce",
-      }),
-    }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "E-commerce",
+          provider: {
+            "@type": "Organization",
+            name: "Pride Digital",
+            url: "https://pridemarketing.co.in/",
+          },
+          url: "https://pride-redesign-1.lovable.app/services/ecommerce",
+        }),
+      },
+    ],
   }),
   component: () => (
     <ServiceDetail
-      marker="04" eyebrow="E-commerce"
+      marker="04"
+      eyebrow="E-commerce"
       title={<>Stores that compound.</>}
       lede="From Shopify to headless — built for AOV, LTV, and the brand world that justifies the price."
       forWhom={[

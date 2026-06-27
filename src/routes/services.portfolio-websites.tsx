@@ -5,26 +5,44 @@ export const Route = createFileRoute("/services/portfolio-websites")({
   head: () => ({
     meta: [
       { title: "Portfolio Websites — Pride Digital" },
-      { name: "description", content: "Editorial portfolio sites for creators, studios, and operators." },
+      {
+        name: "description",
+        content: "Editorial portfolio sites for creators, studios, and operators.",
+      },
       { property: "og:title", content: "Portfolio Websites — Pride Digital" },
       { property: "og:description", content: "A showcase that does the talking." },
-      { property: "og:url", content: "https://pride-redesign-1.lovable.app/services/portfolio-websites" },
+      {
+        property: "og:url",
+        content: "https://pride-redesign-1.lovable.app/services/portfolio-websites",
+      },
     ],
-    links: [{ rel: "canonical", href: "https://pride-redesign-1.lovable.app/services/portfolio-websites" }],
-    scripts: [{
-      type: "application/ld+json",
-      children: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "Service",
-        name: "Portfolio Websites",
-        provider: { "@type": "Organization", name: "Pride Digital", url: "https://pridemarketing.co.in/" },
-        url: "https://pride-redesign-1.lovable.app/services/portfolio-websites",
-      }),
-    }],
+    links: [
+      {
+        rel: "canonical",
+        href: "https://pride-redesign-1.lovable.app/services/portfolio-websites",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Portfolio Websites",
+          provider: {
+            "@type": "Organization",
+            name: "Pride Digital",
+            url: "https://pridemarketing.co.in/",
+          },
+          url: "https://pride-redesign-1.lovable.app/services/portfolio-websites",
+        }),
+      },
+    ],
   }),
   component: () => (
     <ServiceDetail
-      marker="02" eyebrow="Portfolio Websites"
+      marker="02"
+      eyebrow="Portfolio Websites"
       title={<>A showcase that does the talking.</>}
       lede="For directors, designers, architects, and studios who need their work to land — without explanation."
       forWhom={[

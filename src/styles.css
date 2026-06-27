@@ -50,9 +50,9 @@
   --radius: 0.5rem;
 
   /* Brand */
-  --ink: oklch(0.16 0.005 60);            /* #0A0A0B */
-  --paper: oklch(0.985 0.005 90);         /* #FAFAF8 */
-  --amber: oklch(0.58 0.13 55);           /* ~#B8651A */
+  --ink: oklch(0.16 0.005 60); /* #0A0A0B */
+  --paper: oklch(0.985 0.005 90); /* #FAFAF8 */
+  --amber: oklch(0.58 0.13 55); /* ~#B8651A */
   --rule: oklch(0.88 0.008 80);
   --warm-1: oklch(0.97 0.006 85);
   --warm-2: oklch(0.92 0.008 80);
@@ -94,7 +94,8 @@
   --primary-foreground: var(--ink);
 }
 
-html, body {
+html,
+body {
   background: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans);
@@ -102,11 +103,21 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-.font-display { font-family: var(--font-display); letter-spacing: -0.02em; }
-.font-serif-display { font-family: var(--font-serif); letter-spacing: -0.01em; }
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+.font-serif-display {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
 
-.rule { border-color: var(--rule); }
-.hairline { border-top: 1px solid var(--rule); }
+.rule {
+  border-color: var(--rule);
+}
+.hairline {
+  border-top: 1px solid var(--rule);
+}
 
 .section-marker {
   font-family: var(--font-sans);
@@ -117,8 +128,12 @@ html, body {
 }
 
 @keyframes geo-marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 .geo-marquee {
   display: flex;
@@ -131,5 +146,7 @@ html, body {
   -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
 @media (prefers-reduced-motion: reduce) {
-  .geo-marquee { animation: none; }
+  .geo-marquee {
+    animation: none;
+  }
 }

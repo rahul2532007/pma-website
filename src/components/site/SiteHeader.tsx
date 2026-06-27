@@ -21,17 +21,25 @@ export function SiteHeader() {
           Pride<span className="text-amber">.</span>
         </Link>
         <nav className="hidden lg:flex items-center gap-7 text-sm">
-          {nav.map(n => (
-            <Link key={n.to} to={n.to} className="text-warm-5 hover:text-ink transition" activeProps={{ className: "text-ink" }}>
+          {nav.map((n) => (
+            <Link
+              key={n.to}
+              to={n.to}
+              className="text-warm-5 hover:text-ink transition"
+              activeProps={{ className: "text-ink" }}
+            >
               {n.label}
             </Link>
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <Link to="/book" className="hidden sm:inline-flex items-center rounded-full bg-ink text-paper px-4 py-2 text-sm font-medium hover:opacity-90 transition">
+          <Link
+            to="/book"
+            className="hidden sm:inline-flex items-center rounded-full bg-ink text-paper px-4 py-2 text-sm font-medium hover:opacity-90 transition"
+          >
             Book a Consultation
           </Link>
-          <button className="lg:hidden p-2" aria-label="Menu" onClick={() => setOpen(v => !v)}>
+          <button className="lg:hidden p-2" aria-label="Menu" onClick={() => setOpen((v) => !v)}>
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
@@ -39,12 +47,16 @@ export function SiteHeader() {
       {open && (
         <div className="lg:hidden border-t border-rule bg-paper">
           <div className="px-6 py-4 flex flex-col gap-3">
-            {nav.map(n => (
+            {nav.map((n) => (
               <Link key={n.to} to={n.to} className="text-sm py-1" onClick={() => setOpen(false)}>
                 {n.label}
               </Link>
             ))}
-            <Link to="/book" onClick={() => setOpen(false)} className="mt-2 inline-flex items-center justify-center rounded-full bg-ink text-paper px-4 py-2 text-sm font-medium">
+            <Link
+              to="/book"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex items-center justify-center rounded-full bg-ink text-paper px-4 py-2 text-sm font-medium"
+            >
               Book a Consultation
             </Link>
           </div>
